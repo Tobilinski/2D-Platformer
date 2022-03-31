@@ -7,6 +7,8 @@ public class LevelLoader : MonoBehaviour
     public Animator Trans;
     public float TransTime = 1f;
 
+    
+
     // Update is called once per frame
     void Update()
     {
@@ -14,13 +16,7 @@ public class LevelLoader : MonoBehaviour
             NextLevel();
         }*/
     }
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.tag == "Respawn")
-        {
-            Debug.Log("null");
-        }
-    }
+    
 
     public void NextLevel()
     {

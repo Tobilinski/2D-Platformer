@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
-    public int Stars = 0;
+    public int StarNm = 0;
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Star")
         {
             Destroy(other.gameObject);
 
-            Stars ++;
-            Debug.Log(Stars);
+            StarNm ++;
+            //Debug.Log(Stars);
 
 
         }
