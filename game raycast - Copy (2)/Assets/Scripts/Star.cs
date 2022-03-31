@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
-    protected int Stars = 0;
+    public int Stars = 0;
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.tag == "Star")

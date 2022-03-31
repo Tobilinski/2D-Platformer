@@ -15,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D _boxCollider2D;
     [SerializeField] private LayerMask _layerMask;
     public float runSpeed, jumpSpeed;
+    public GameObject LevelLoader;
+    public Star Stars;
 
     // Start is called before the first frame update
     void Start()
@@ -88,7 +90,16 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit2D.collider != null;
 
     }
-    
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag == "NextLevel" )
+        {
+            Debug.Log("null");
+            LevelLoader.GetComponent<LevelLoader>().NextLevel();
+            
+        }
+    }
 
 
 
