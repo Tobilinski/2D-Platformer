@@ -14,6 +14,7 @@ public class Patrol : MonoBehaviour
     private bool _movingRight = true;
 
     public Transform groundDetection;
+    
    
 
     // Update is called once per frame
@@ -34,6 +35,7 @@ public class Patrol : MonoBehaviour
                 _movingRight = true;
             }
         }
+        
     }
     
     

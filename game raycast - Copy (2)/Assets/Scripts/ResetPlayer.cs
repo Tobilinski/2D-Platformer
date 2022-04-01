@@ -11,5 +11,10 @@ public class ResetPlayer : MonoBehaviour
         {
             transform.position = new Vector3(-16.15f, -6.05f, 0f);
         }
+
+        if(other.gameObject.tag == "Enemy")
+        {
+            transform.position = new Vector3(-16.15f, -6.05f, 0f);
+        }
     }
 }
