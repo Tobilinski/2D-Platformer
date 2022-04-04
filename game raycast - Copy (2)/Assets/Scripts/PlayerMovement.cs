@@ -103,6 +103,8 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("null");
             LevelLoader.GetComponent<LevelLoader>().NextLevel();          
         }
+
+
     }
 
 
