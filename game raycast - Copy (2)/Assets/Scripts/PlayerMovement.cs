@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-
+    //PlayerBody
     protected Rigidbody2D Rb;
     private GameObject _playerBody;
     //Animation
@@ -15,6 +15,11 @@ public class PlayerMovement : MonoBehaviour
     private BoxCollider2D _boxCollider2D;
     [SerializeField] private LayerMask _layerMask;
     public float runSpeed, jumpSpeed;
+    //LevelLoader
+    public GameObject LevelLoader;
+    //Stars Import
+    public Star Stars;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +32,8 @@ public class PlayerMovement : MonoBehaviour
         runSpeed = 10f;
         jumpSpeed = 25f;
 
+        Stars.StarNm = 0;
+        
     }
 
 
@@ -88,7 +95,17 @@ public class PlayerMovement : MonoBehaviour
         return raycastHit2D.collider != null;
 
     }
-    
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (Stars.StarNm == 1 && other.gameObject.tag == "NextLevel" )
+        {
+            Debug.Log("null");
+            LevelLoader.GetComponent<LevelLoader>().NextLevel();          
+        }
+
+
+    }
 
 
 

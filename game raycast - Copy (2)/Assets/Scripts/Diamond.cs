@@ -2,17 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Star : MonoBehaviour
+public class Diamond : MonoBehaviour
 {
-    public int StarNm = 0;
     void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "Star")
+        if (other.gameObject.tag == "Diamond")
         {
             Destroy(other.gameObject);
 
-            StarNm ++;
-            //Debug.Log(Stars);
+            
+            //Debug.Log(Diamond);
 
 
         }
