@@ -14,12 +14,13 @@ public class PlayerMovement : MonoBehaviour
     //Raycast
     private BoxCollider2D _boxCollider2D;
     [SerializeField] private LayerMask _layerMask;
-    public float runSpeed, jumpSpeed;
+    
     //LevelLoader
     public GameObject LevelLoader;
     //Stars Import
     public Star Stars;
-    
+    //Speeds
+    public float runSpeed, jumpSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -29,9 +30,9 @@ public class PlayerMovement : MonoBehaviour
         _boxCollider2D = transform.GetComponent<BoxCollider2D>();
         _animator = GetComponent<Animator>();
         _animation = gameObject.GetComponent<Animation>();
+
         runSpeed = 10f;
         jumpSpeed = 25f;
-
         Stars.StarNm = 0;
         
     }
@@ -52,6 +53,7 @@ public class PlayerMovement : MonoBehaviour
             Sr.flipX = true;
             Rb.velocity = new Vector2(-runSpeed, Rb.velocity.y);
             _animator.SetBool("IsRunning", true);
+            //Debug.Log("running");
         }
         else
         {
@@ -61,6 +63,7 @@ public class PlayerMovement : MonoBehaviour
                 Sr.flipX = false;
                 Rb.velocity = new Vector2(+runSpeed, Rb.velocity.y);
                 _animator.SetBool("IsRunning", true);
+                //Debug.Log("running");
             }
             else
             {
@@ -74,6 +77,7 @@ public class PlayerMovement : MonoBehaviour
 
             Rb.velocity = Vector2.up * jumpSpeed;
             _animator.SetBool("IsJumping", true);
+            //Debug.Log("jump");
         }
         else
         {
@@ -96,7 +100,7 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (Stars.StarNm == 1 && other.gameObject.tag == "NextLevel" )
         {
