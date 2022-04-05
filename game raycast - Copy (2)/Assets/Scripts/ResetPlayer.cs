@@ -14,6 +14,7 @@ public class ResetPlayer : MonoBehaviour
 
         if(other.gameObject.tag == "Enemy")
         {
+            Debug.Log("Hit");
             transform.position = new Vector3(-15.88f, -5.07f, 0f);
         }
     }

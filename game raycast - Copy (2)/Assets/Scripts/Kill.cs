@@ -7,7 +7,7 @@ public class Kill : MonoBehaviour
     public GameObject Enemy;
     
    
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if ( other.gameObject.tag == "Kill")
         {
@@ -17,4 +17,5 @@ public class Kill : MonoBehaviour
 
 
     }
+    
 }
