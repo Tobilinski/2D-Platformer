@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     //Stars Import
     public Star Stars;
     //Speeds
-    public float runSpeed, jumpSpeed;
+    private float runSpeed, jumpSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -33,8 +33,7 @@ public class PlayerMovement : MonoBehaviour
 
         runSpeed = 10f;
         jumpSpeed = 25f;
-        Stars.StarNm = 0;
-        
+        Stars.StarNm = 0;   
     }
 
 
@@ -82,10 +81,7 @@ public class PlayerMovement : MonoBehaviour
         else
         {
             _animator.SetBool("IsJumping", false);
-        }
-        
-
-
+        }  
     }
 
 
@@ -97,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
         // print(raycastHit2D.collider);
 
         return raycastHit2D.collider != null;
-
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -107,10 +102,5 @@ public class PlayerMovement : MonoBehaviour
             Debug.Log("null");
             LevelLoader.GetComponent<LevelLoader>().NextLevel();          
         }
-
-
     }
-
-
-
 }
