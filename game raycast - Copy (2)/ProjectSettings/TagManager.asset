@@ -52,6 +52,24 @@ TagManager:
   - name: Frame
     uniqueID: 3495250023
     locked: 0
+  - name: Bg
+    uniqueID: 2619440187
+    locked: 0
+  - name: Myst
+    uniqueID: 3501914803
+    locked: 0
+  - name: Rock1
+    uniqueID: 3377741659
+    locked: 0
+  - name: Rock2
+    uniqueID: 2659597175
+    locked: 0
+  - name: Rock3
+    uniqueID: 1583786209
+    locked: 0
+  - name: Rock4
+    uniqueID: 109061645
+    locked: 0
   - name: forground
     uniqueID: 530748605
     locked: 0
