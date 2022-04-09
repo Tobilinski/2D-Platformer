@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private float runSpeed, jumpSpeed;
     // Prticle system
     public ParticleSystem Dust;
+    public ParticleSystem Kindle;
 
     // Start is called before the first frame update
     void Start()
@@ -42,7 +43,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         Move();
-
+        Kindle.Play();
     }
 
     void Move()
