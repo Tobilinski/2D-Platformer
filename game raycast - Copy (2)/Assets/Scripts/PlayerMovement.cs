@@ -21,6 +21,8 @@ public class PlayerMovement : MonoBehaviour
     public Star Stars;
     //Speeds
     private float runSpeed, jumpSpeed;
+    // Prticle system
+    public ParticleSystem Dust;
 
     // Start is called before the first frame update
     void Start()
@@ -52,7 +54,9 @@ public class PlayerMovement : MonoBehaviour
             Sr.flipX = true;
             Rb.velocity = new Vector2(-runSpeed, Rb.velocity.y);
             _animator.SetBool("IsRunning", true);
+            Dust.Play();
             //Debug.Log("running");
+
         }
         else
         {
@@ -63,6 +67,8 @@ public class PlayerMovement : MonoBehaviour
                 Rb.velocity = new Vector2(+runSpeed, Rb.velocity.y);
                 _animator.SetBool("IsRunning", true);
                 //Debug.Log("running");
+                Dust.Play();
+
             }
             else
             {
@@ -76,12 +82,15 @@ public class PlayerMovement : MonoBehaviour
 
             Rb.velocity = Vector2.up * jumpSpeed;
             _animator.SetBool("IsJumping", true);
+            Dust.Play();
             //Debug.Log("jump");
+           
         }
         else
         {
             _animator.SetBool("IsJumping", false);
-        }  
+        }
+        
     }
 
 
@@ -103,4 +112,6 @@ public class PlayerMovement : MonoBehaviour
             LevelLoader.GetComponent<LevelLoader>().NextLevel();          
         }
     }
+
+    
 }

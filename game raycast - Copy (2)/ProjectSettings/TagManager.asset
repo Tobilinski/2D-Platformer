@@ -73,3 +73,9 @@ TagManager:
   - name: forground
     uniqueID: 530748605
     locked: 0
+  - name: Particle
+    uniqueID: 2433018851
+    locked: 0
+  - name: Player
+    uniqueID: 1281178889
+    locked: 0
