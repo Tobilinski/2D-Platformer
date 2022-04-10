@@ -6,7 +6,7 @@ public class LevelLoader : MonoBehaviour
 {
     public Animator Trans;
     public float TransTime = 1f;
-    public Star Stars;
+    
 
     
 

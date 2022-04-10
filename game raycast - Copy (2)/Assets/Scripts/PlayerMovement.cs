@@ -82,15 +82,12 @@ public class PlayerMovement : MonoBehaviour
         {
 
             Rb.velocity = Vector2.up * jumpSpeed;
-            _animator.SetBool("IsJumping", true);
+            
             Dust.Play();
             //Debug.Log("jump");
            
         }
-        else
-        {
-            _animator.SetBool("IsJumping", false);
-        }
+       
         
     }
 
@@ -111,6 +108,10 @@ public class PlayerMovement : MonoBehaviour
         {
             Debug.Log("null");
             LevelLoader.GetComponent<LevelLoader>().NextLevel();          
+        }
+        if(other.gameObject.tag == "Diamond")
+        {
+            LevelLoader.GetComponent<LevelLoader>().NextLevel();
         }
     }
 
