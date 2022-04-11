@@ -16267,6 +16267,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.041699886
       objectReference: {fileID: 0}
+    - target: {fileID: 2760272243762347959, guid: 521c1e59784f54f4fb8c17c31a158fc7, type: 3}
+      propertyPath: m_Material
+      value: 
+      objectReference: {fileID: 6200000, guid: 90cfa76b22e1f0d4b88bbf47aa2df6cf, type: 2}
     - target: {fileID: 2760272243790264679, guid: 521c1e59784f54f4fb8c17c31a158fc7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3022003
@@ -16283,7 +16287,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: -0.04
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2760272243762347952, guid: 521c1e59784f54f4fb8c17c31a158fc7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 521c1e59784f54f4fb8c17c31a158fc7, type: 3}
 --- !u!1 &1530244715
 GameObject:
@@ -18819,7 +18824,6 @@ GameObject:
   - component: {fileID: 675869323724379021}
   - component: {fileID: 675869323724379023}
   - component: {fileID: 675869323724379022}
-  - component: {fileID: 675869323724379056}
   m_Layer: 6
   m_Name: tile29
   m_TagString: Ground
@@ -18850,7 +18854,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 675869323724379020}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 90cfa76b22e1f0d4b88bbf47aa2df6cf, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -18918,32 +18922,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &675869323724379056
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 675869323724379020}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 90cfa76b22e1f0d4b88bbf47aa2df6cf, type: 2}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.1875986, y: -0.009258881}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.64, y: 0.64}
-    newSize: {x: 0.64, y: 0.64}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.033913463, y: 0.3474214}
-  m_EdgeRadius: 0
 --- !u!1 &675869324812277273
 GameObject:
   m_ObjectHideFlags: 0
