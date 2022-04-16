@@ -113,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
         {
             LevelLoader.GetComponent<LevelLoader>().NextLevel();
         }
+        
     }
 
     
