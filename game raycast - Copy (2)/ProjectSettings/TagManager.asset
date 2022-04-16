@@ -10,8 +10,6 @@ TagManager:
   - Enemy
   - Kill
   - Diamond
-  - tip
-  - Tipremover
   layers:
   - Default
   - TransparentFX
